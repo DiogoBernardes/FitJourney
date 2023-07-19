@@ -1,7 +1,6 @@
 ﻿using BusinessLogic.Models.User;
 using FitJourney_BackEnd.Interface;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitJourney_BackEnd.Controllers;
@@ -69,16 +68,7 @@ public class UserController : ControllerBase
 
         return NoContent();
     }
-    
-    // GET: api/user
-    [HttpGet("GetUserByEmail/{email}")]
-    [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> GetUserByEmail(string email)
-    {
-        var user = await _userRepository.GetUserByEmail(email);
-        return Ok(user);
-    }
-    
+        
     // DELETE: api/user/{id}
     [HttpDelete("DeleteUser/{id}")]
     [Authorize(Roles = "Admin")]
@@ -88,6 +78,16 @@ public class UserController : ControllerBase
 
         return NoContent();
     }
+    
+    // GET: api/user
+    [HttpGet("GetUserByEmail/{email}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetUserByEmail(string email)
+    {
+        var user = await _userRepository.GetUserByEmail(email);
+        return Ok(user);
+    }
+
     
     // GET: api/user
     [HttpGet("GetUserRoles")]

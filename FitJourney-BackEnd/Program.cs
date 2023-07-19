@@ -61,6 +61,7 @@ builder.Services.AddAuthentication(options =>
 
 //dependencias/Serviços
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ISportsRepository, SportsRepository>();
 
 builder.Services.AddAuthorization();
 
