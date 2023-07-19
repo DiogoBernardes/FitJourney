@@ -52,6 +52,7 @@ public class AuthenticationController : ControllerBase
         }
 
 
+      
         private string GenerateJwtToken(string email)
         {
             var user = _userRepository.GetUserByEmail(email).Result;
@@ -92,9 +93,11 @@ public class AuthenticationController : ControllerBase
             }
             else
             {
-                throw new Exception("The key is not configured!");
+                throw new Exception("A chave secreta não está configurada.");
             }
         }
+
+
 
 
 }
