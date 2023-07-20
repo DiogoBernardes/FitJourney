@@ -7,13 +7,15 @@ public partial class Activity
 {
     public int ActivityId { get; set; }
 
+    public string? ActivityName { get; set; }
+
     public int? UserId { get; set; }
 
     public int? SportId { get; set; }
 
     public int? ExerciseId { get; set; }
 
-    public TimeSpan? Duration { get; set; }
+    public double? Duration { get; set; }
 
     public double? CaloriesBurned { get; set; }
 

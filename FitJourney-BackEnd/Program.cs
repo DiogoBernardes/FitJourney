@@ -63,7 +63,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISportsRepository, SportsRepository>();
 builder.Services.AddScoped<IExercisesRepository, ExercisesRepository>();
-
+builder.Services.AddScoped<IActivitiesRepository, ActivitiesRepository>();
 
 builder.Services.AddAuthorization();
 

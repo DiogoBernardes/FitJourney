@@ -67,6 +67,9 @@ public partial class FitJourneyDbContext : DbContext
 
             entity.Property(e => e.ActivityId).HasColumnName("activity_id");
             entity.Property(e => e.ActivityDate).HasColumnName("activity_date");
+            entity.Property(e => e.ActivityName)
+                .HasMaxLength(255)
+                .HasColumnName("activity_name");
             entity.Property(e => e.CaloriesBurned).HasColumnName("calories_burned");
             entity.Property(e => e.Duration).HasColumnName("duration");
             entity.Property(e => e.ExerciseId).HasColumnName("exercise_id");
