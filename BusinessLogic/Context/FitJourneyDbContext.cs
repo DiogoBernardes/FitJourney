@@ -24,6 +24,8 @@ public partial class FitJourneyDbContext : DbContext
 
     public virtual DbSet<Challenge> Challenges { get; set; }
 
+    public virtual DbSet<Challengeparticipant> Challengeparticipants { get; set; }
+
     public virtual DbSet<Exercise> Exercises { get; set; }
 
     public virtual DbSet<Goal> Goals { get; set; }
@@ -139,25 +141,25 @@ public partial class FitJourneyDbContext : DbContext
             entity.HasOne(d => d.Sport).WithMany(p => p.Challenges)
                 .HasForeignKey(d => d.SportId)
                 .HasConstraintName("challenges_sport_id_fkey");
+        });
 
-            entity.HasMany(d => d.Participants).WithMany(p => p.ChallengesNavigation)
-                .UsingEntity<Dictionary<string, object>>(
-                    "Challengeparticipant",
-                    r => r.HasOne<User>().WithMany()
-                        .HasForeignKey("ParticipantId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("challengeparticipants_participant_id_fkey"),
-                    l => l.HasOne<Challenge>().WithMany()
-                        .HasForeignKey("ChallengeId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("challengeparticipants_challenge_id_fkey"),
-                    j =>
-                    {
-                        j.HasKey("ChallengeId", "ParticipantId").HasName("challengeparticipants_pkey");
-                        j.ToTable("challengeparticipants");
-                        j.IndexerProperty<int>("ChallengeId").HasColumnName("challenge_id");
-                        j.IndexerProperty<int>("ParticipantId").HasColumnName("participant_id");
-                    });
+        modelBuilder.Entity<Challengeparticipant>(entity =>
+        {
+            entity.HasKey(e => e.Challengeparticipant1).HasName("challengeparticipants_pkey");
+
+            entity.ToTable("challengeparticipants");
+
+            entity.Property(e => e.Challengeparticipant1).HasColumnName("challengeparticipant");
+            entity.Property(e => e.ChallengeId).HasColumnName("challenge_id");
+            entity.Property(e => e.ParticipantId).HasColumnName("participant_id");
+
+            entity.HasOne(d => d.Challenge).WithMany(p => p.Challengeparticipants)
+                .HasForeignKey(d => d.ChallengeId)
+                .HasConstraintName("challengeparticipants_challenge_id_fkey");
+
+            entity.HasOne(d => d.Participant).WithMany(p => p.Challengeparticipants)
+                .HasForeignKey(d => d.ParticipantId)
+                .HasConstraintName("challengeparticipants_participant_id_fkey");
         });
 
         modelBuilder.Entity<Exercise>(entity =>

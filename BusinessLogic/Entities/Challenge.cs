@@ -23,11 +23,11 @@ public partial class Challenge
 
     public bool? Achieved { get; set; }
 
+    public virtual ICollection<Challengeparticipant> Challengeparticipants { get; set; } = new List<Challengeparticipant>();
+
     public virtual Exercise? Exercise { get; set; }
 
     public virtual User? Owner { get; set; }
 
     public virtual Sport? Sport { get; set; }
-
-    public virtual ICollection<User> Participants { get; set; } = new List<User>();
 }

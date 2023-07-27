@@ -25,11 +25,11 @@ public partial class User
 
     public virtual ICollection<Activity> Activities { get; set; } = new List<Activity>();
 
+    public virtual ICollection<Challengeparticipant> Challengeparticipants { get; set; } = new List<Challengeparticipant>();
+
     public virtual ICollection<Challenge> Challenges { get; set; } = new List<Challenge>();
 
     public virtual ICollection<Goal> Goals { get; set; } = new List<Goal>();
 
     public virtual Role? Role { get; set; }
-
-    public virtual ICollection<Challenge> ChallengesNavigation { get; set; } = new List<Challenge>();
 }
