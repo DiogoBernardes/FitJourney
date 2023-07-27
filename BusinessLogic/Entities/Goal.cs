@@ -25,7 +25,7 @@ public partial class Goal
 
     public DateOnly? EndDate { get; set; }
 
-    public bool? Achieved { get; set; }
+    public bool Achieved { get; set; }
 
     public virtual Exercise? Exercise { get; set; }
 

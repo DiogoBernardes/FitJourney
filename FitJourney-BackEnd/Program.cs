@@ -67,6 +67,7 @@ builder.Services.AddScoped<IActivitiesRepository, ActivitiesRepository>();
 builder.Services.AddScoped<IActivityExerciseRepository, ActivityExerciseRepository>();
 builder.Services.AddScoped<IChallengesRepository, ChallengesRepository>();
 builder.Services.AddScoped<IChallengeParticipantRepository, ChallengeParticipantRepository>();
+builder.Services.AddScoped<IGoalsRepository, GoalsRepository>();
 
 builder.Services.AddAuthorization();
 
