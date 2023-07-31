@@ -59,6 +59,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+
+
 //dependencias/Serviços
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISportsRepository, SportsRepository>();
@@ -69,6 +71,7 @@ builder.Services.AddScoped<IChallengesRepository, ChallengesRepository>();
 builder.Services.AddScoped<IChallengeParticipantRepository, ChallengeParticipantRepository>();
 builder.Services.AddScoped<IGoalsRepository, GoalsRepository>();
 builder.Services.AddScoped<IAchievementRepository, AchievementRepository>();
+builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 
 builder.Services.AddAuthorization();
 

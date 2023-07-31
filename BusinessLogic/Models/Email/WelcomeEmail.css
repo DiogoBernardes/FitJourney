@@ -1,0 +1,31 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+/* Estilos para o contêiner do email */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Estilos para o cabeçalho do email */
+.header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+/* Estilos para o corpo do email */
+.content {
+    background-color: #fff;
+    padding: 20px;
+}
+/* Estilos para o rodapé do email */
+.footer {
+    background-color: #f9f9f9;
+    padding: 10px;
+}
