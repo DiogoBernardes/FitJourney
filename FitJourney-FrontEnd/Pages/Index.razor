@@ -1,0 +1,123 @@
+﻿@page "/Home"
+<body class="relative">
+
+<header class="p-4 bg-black text-white opacity-90">
+    <div class="container flex justify-between h-10 mx-auto">
+        <a class="flex items-center p-2">
+            <img class="h-10 w-26" src="./Assets/logo.png" alt="FitJourney Logo">
+        </a>
+        <ul class="items-stretch hidden space-x-3 lg:flex">
+            <li class="flex">
+                <a href="#features" class="flex items-center hover:text-gray-500 px-4 mb-1 font-serif">Features</a>
+            </li>
+            <li class="flex">
+                <a href="#about" class="flex items-center hover:text-gray-500 px-4 mb-1 font-serif">About Us</a>
+            </li>
+        </ul>
+        <div class="items-center flex-shrink-0 hidden lg:flex">
+            <button class="self-center px-8 py-3 font-semibold rounded-2xl bg-red-400  hover:bg-red-300 text-white opacity-90 font-serif">Sign In</button>
+        </div>
+    </div>
+</header>
+
+<div class="flex left-0 w-full h-screen overflow-hidden">
+    <video autoplay loop muted class="object-cover h-full w-full opacity-90">
+        <source src="./Assets/Video.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="features" class="flex items-center justify-center flex-col bg-gray-200 h-auto">
+    
+    <h3 class="flex justify-center text-black mt-12 text-5xl font-extrabold">Let us help you!</h3>
+    <div class="grid grid-cols-3 gap-14 mt-5">
+        
+        <div class="max-w-xs p-6 rounded-md mt-12 mb-6 shadow-xl bg-red-300 flex flex-col items-center justify-between">
+            <img src="Assets/Features/tracking.png" alt="" class="object-cover rounded-md h-20 bg-red-300">
+            <div class="mt-6 mb-2">
+                <h2 class="text-xl font-semibold">Physical Activity Log and Detailed History</h2>
+            </div>
+            <li class="text-gray-100 mt-2">Ability to record different types of physical activities.</li>
+            <li class="text-gray-100 mt-2">Specific details of each activity.</li>
+        </div>
+
+        <div class="max-w-xs p-6 rounded-md mt-12 mb-6 shadow-xl bg-red-400 flex flex-col items-center justify-between">
+            <img src="Assets/Features/statistics.png" alt="" class="object-cover rounded-md h-20 bg-red-400">
+            <div class="mt-6 mb-2">
+                <h2 class="text-xl font-semibold">Statistics</h2>
+            </div>
+            <li class="text-gray-100 mt-2">Statistics of physical activities performed.</li>
+            <li class="text-gray-100 mt-2">Interactive charts and visualizations to track your progress.</li>
+        </div>
+
+        <div class="max-w-xs p-6 rounded-md mt-12 mb-6 shadow-xl bg-red-300 flex flex-col items-center justify-between">
+            <img src="Assets/Features/challenge.png" alt="" class="object-cover rounded-md h-20 bg-red-300">
+            <div class="mt-6 mb-2">
+                <h2 class="text-xl font-semibold">Goals and Challenges</h2>
+            </div>
+            <li class="text-gray-100 mt-2">Definition of personal fitness goals.</li>
+            <li class="text-gray-100 mt-2">Participation in community challenges.</li>
+            <li class="text-gray-100 mt-2">Earn badges by achieving goals and completing challenges.</li>
+        </div>
+
+    </div>
+
+    <div class="grid grid-cols-3 gap-14 h-128 mb-16">
+    
+        <div class="max-w-xs p-6 rounded-md mt-12 mb-6 shadow-xl bg-red-400 flex flex-col items-center justify-between">
+            <img src="Assets/Features/trainPlan.png" alt="" class="object-cover rounded-md h-20 bg-red-400">
+            <div class="mt-6 mb-2">
+                <h2 class="text-xl font-semibold">AI Training Plans</h2>
+            </div>
+            <li class="text-gray-100 mt-2">Make your own training plan with the help of artificial intelligence.</li>
+            <li class="text-gray-100 mt-2">Adequacy to your goals and your schedules.</li>
+        </div>
+
+        <div class="max-w-xs p-6 rounded-md mt-12 mb-6 shadow-xl bg-red-300 flex flex-col items-center justify-between">
+            <img src="Assets/Features/diet.png" alt="" class="object-cover rounded-md h-20 bg-red-300">
+            <div class="mt-6 mb-2">
+                <h2 class="text-xl font-semibold">AI Meal Plan</h2>
+            </div>
+            <li class="text-gray-100 mt-2">Make your own eating plan, with your favorite foods and framed in the diet through the help of artificial intelligence.</li>
+        </div>
+
+        <div class="max-w-xs p-6 rounded-md mt-12 mb-6 shadow-xl bg-red-400 flex flex-col items-center justify-between">
+            <img src="Assets/Features/calculator.png" alt="" class="object-cover rounded-md h-20 bg-red-400">
+            <div class="mt-6 mb-2">
+                <h2 class="text-xl font-semibold">Calculation of BMR</h2>
+            </div>
+            <li class="text-gray-100 mt-2">Calculate your Basal Metabolic Rate to adjust your caloric intake effectively and thus achieve better results.</li>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="about" class=" flex flex-col mx-auto lg:flex-row h-auto pl-24 bg-black opacity-80">
+    <div class="w-2/6 flex items-center justify-center ">
+        <img src="./Assets/BlackLogo.png" alt="" class="rounded-xl w-10/12 h-64">
+    </div>
+    <div class="flex flex-col justify-center w-4/6 pt-12 pb-12 ml-14 pr-24">
+        <div class="bg-red-400 opacity-90 rounded-xl p-8">
+            <h2 class="text-3xl text-white font-bold leading-tight">About us</h2>
+            <p class="mt-4 mb-8 text-white text-sm">
+                At FitJourney, we believe that every step is an achievement and every move brings us closer to our health and wellness goals. 
+                We are a platform dedicated to inspiring and supporting your physical journey, helping you to record, track and celebrate every moment of activity.</p>
+            <p class="mt-4 mb-8 text-white text-sm">
+                Our mission is to provide our users with a perfect tool to turn every physical activity into a meaningful step towards a healthier lifestyle.
+                Whether you're running, walking, in the gym or in any other sport, FitJourney is here to help turn those moments into remarkable achievements.
+            </p>
+            <p class="mt-4 mb-8 text-white text-sm">
+                Join us on FitJourney and start building your way toward a healthier, more active version of yourself. 
+                Every move counts, and we're here to celebrate every step along your journey. Let's embark on this exciting journey together!
+            </p>
+            <u class="mt-4 mb-8 text-white text-sm font-semibold">
+                FitJourney Team
+            </u>
+            
+            
+        </div>
+    </div>
+</div>
+
+</body>
