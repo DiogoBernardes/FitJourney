@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitJourney-BackEnd", "FitJo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{54F3F51D-BF7D-42EC-9E1B-57B994B9AAF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitJourney-FrontEnd", "FitJourney-FrontEnd\FitJourney-FrontEnd.csproj", "{F7DF284F-EC7E-44F6-A328-57C889C11061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{54F3F51D-BF7D-42EC-9E1B-57B994B9AAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54F3F51D-BF7D-42EC-9E1B-57B994B9AAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54F3F51D-BF7D-42EC-9E1B-57B994B9AAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7DF284F-EC7E-44F6-A328-57C889C11061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7DF284F-EC7E-44F6-A328-57C889C11061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7DF284F-EC7E-44F6-A328-57C889C11061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7DF284F-EC7E-44F6-A328-57C889C11061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
